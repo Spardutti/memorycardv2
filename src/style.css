@@ -1,40 +1,92 @@
-*{
-    color: white;
-    background-color: black;
+* {
+  color: orange;
+  background-color: black;
 }
 
 .navContainer {
-    border: 1px solid white;
-    position: relative;
+  border: 5px solid rgba(255, 166, 0, 0.473);
+  position: relative;
 }
 
 .navContainer h1 {
-    text-align: center;
+  text-align: center;
 }
 
 .score {
-    position: absolute;
-    bottom: 15px;
-    right: 20px;
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
 }
 .bestScore {
-    position: absolute;
-    bottom: -5px;
-    right: 20px;
+  position: absolute;
+  bottom: -5px;
+  right: 20px;
 }
 
 .imageContainer {
- display: grid;
- grid-template-columns: repeat(4, 1fr);
- grid-template-rows: repeat(4, 200px);
- margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 200px);
+  margin-top: 20px;
 }
 
 img {
-    width: 90%;
-    height: 90%;
-    border: 1px solid black;
-    background-color: rgb(117, 109, 0);
-    margin-left: 10px;
-    border-radius: 10px;
+  width: 90%;
+  height: 90%;
+  border: 1px solid black;
+  background-color: rgba(163, 163, 119, 0.808);
+  margin-left: 10px;
+  border-radius: 10px;
+}
+
+.winnerScreen {
+  margin-top: 100px;
+}
+.winner {
+  display: flex;
+  justify-content: center;
+  animation: change 1s step-end infinite;
+}
+
+.winnerMessage {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  animation: change 1s step-end infinite;
+}
+.loser {
+  display: flex;
+  justify-content: center;
+}
+
+.loserMessage {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@keyframes change {
+  0% {
+    color: red;
+  }
+  25% {
+    color: blue;
+  }
+  50% {
+    color: white;
+  }
+  75% {
+    color: yellow;
+  }
+}
+button {
+  margin: auto;
+  display: flex;
+  background-color: red;
+  font-weight: bold;
+  border-radius: 10px;
+  color: yellow;
+  font-size: 22px;
 }

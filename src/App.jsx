@@ -3,6 +3,8 @@ import "./style.css";
 import Header from "./Components/Header";
 import Images from "./Components/Images";
 import images from "./Components/GetImages";
+import Winner from "./Components/Winner";
+import Loser from "./Components/Loser"
 
 const App = (props) => {
   //initial order/state
@@ -12,7 +14,8 @@ const App = (props) => {
   const [clickedImgArr, setClickedImgArr] = useState([]);
   const [displayImages, setDisplayImages] = useState(true);
   const onMount = useRef(true);
-  const [ winner, setWinner ] = useState(false);
+  const [winner, setWinner] = useState(false);
+  const [loser, setLoser] = useState(false);
   //mix the array and select the first 12 elements to be displayed
   let shuffle = imgArr.sort(() => 0.5 - Math.random()).slice(0, 12);
 
@@ -22,12 +25,13 @@ const App = (props) => {
     //click and check if it was clicked previously
     if (clickedImgArr.indexOf(e.target.name) === -1 && displayImages === true) {
       setClickedImgArr((prevState) => [...prevState, e.target.name]);
+      //update score and bestScore
       setScore(score + 1);
       if (score >= bestScore) {
         setBestScore(score + 1);
       }
     } else {
-      alert("Lose");
+      setLoser(true);
       setDisplayImages(false);
     }
   };
@@ -39,21 +43,48 @@ const App = (props) => {
     }
     //runs on updates
     else {
-      if (score === 2) {
-        alert("win");
+      //check winner
+      if (score === 12) {
         setWinner(true);
         setDisplayImages(false);
       }
     }
-  }, [clickedImgArr, score]);
+  }, [clickedImgArr, loser]);
+
+  //restart the game but keeps the BestScore
+  const playAgain = () => {
+    console.log("GO");
+    setWinner(false);
+    setLoser(false)
+    setDisplayImages(true);
+    setScore(0);
+    setClickedImgArr([]);
+  };
 
   return (
     <div>
-      {winner ? <div> hola </div> : 
-      <div>
-      <Header score={score} bestScore={bestScore} />
-      <Images shuffle={shuffle} mixit={displayImages ? clickedImage : null} />
-      </div>}
+      {/*if(winner) display winner SCreen */}
+      {winner ? (
+        <div>
+          <Header score={score} bestScore={bestScore} />
+          <Winner playAgain={playAgain} />
+        </div>
+        /*if(loser) display loser screen */
+      ) : loser ? (
+        <div>
+          <Header score={score} bestScore={bestScore} />
+          <Loser playAgain={playAgain} bestScore={bestScore} />
+        </div>
+      ) : 
+      /* else display the main game loop*/(
+        <div>
+          <Header score={score} bestScore={bestScore} />
+          <Images
+            shuffle={shuffle}
+            mixit={displayImages ? clickedImage : null}
+          />
+        </div>
+      )}
     </div>
   );
 };
