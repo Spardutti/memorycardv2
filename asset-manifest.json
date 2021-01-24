@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/memorycardv2/static/css/main.c87c87aa.chunk.css",
+    "main.js": "/memorycardv2/static/js/main.2f5fb243.chunk.js",
+    "main.js.map": "/memorycardv2/static/js/main.2f5fb243.chunk.js.map",
+    "runtime-main.js": "/memorycardv2/static/js/runtime-main.e6987c84.js",
+    "runtime-main.js.map": "/memorycardv2/static/js/runtime-main.e6987c84.js.map",
+    "static/js/2.186cb068.chunk.js": "/memorycardv2/static/js/2.186cb068.chunk.js",
+    "static/js/2.186cb068.chunk.js.map": "/memorycardv2/static/js/2.186cb068.chunk.js.map",
+    "index.html": "/memorycardv2/index.html",
+    "static/css/main.c87c87aa.chunk.css.map": "/memorycardv2/static/css/main.c87c87aa.chunk.css.map",
+    "static/js/2.186cb068.chunk.js.LICENSE.txt": "/memorycardv2/static/js/2.186cb068.chunk.js.LICENSE.txt",
+    "static/media/broly1.671c42b2.png": "/memorycardv2/static/media/broly1.671c42b2.png",
+    "static/media/broly2.8982ee28.png": "/memorycardv2/static/media/broly2.8982ee28.png",
+    "static/media/buu1.d0f2a8d7.png": "/memorycardv2/static/media/buu1.d0f2a8d7.png",
+    "static/media/buu2.471140c8.png": "/memorycardv2/static/media/buu2.471140c8.png",
+    "static/media/buu3.fa8dc3d4.png": "/memorycardv2/static/media/buu3.fa8dc3d4.png",
+    "static/media/cell1.ea050640.png": "/memorycardv2/static/media/cell1.ea050640.png",
+    "static/media/cell2.63513ede.png": "/memorycardv2/static/media/cell2.63513ede.png",
+    "static/media/freezer2.2cc4d9b5.png": "/memorycardv2/static/media/freezer2.2cc4d9b5.png",
+    "static/media/freezer3.096d8b34.png": "/memorycardv2/static/media/freezer3.096d8b34.png",
+    "static/media/gohan1.404c6547.png": "/memorycardv2/static/media/gohan1.404c6547.png",
+    "static/media/gohan2.8437d397.png": "/memorycardv2/static/media/gohan2.8437d397.png",
+    "static/media/goku1.021d7835.png": "/memorycardv2/static/media/goku1.021d7835.png",
+    "static/media/goku2.cda06b86.png": "/memorycardv2/static/media/goku2.cda06b86.png",
+    "static/media/goku3.74f3df19.png": "/memorycardv2/static/media/goku3.74f3df19.png",
+    "static/media/piccolo1.fd8778f0.png": "/memorycardv2/static/media/piccolo1.fd8778f0.png",
+    "static/media/piccolo2.7364beb5.png": "/memorycardv2/static/media/piccolo2.7364beb5.png",
+    "static/media/vegeta1.13164974.png": "/memorycardv2/static/media/vegeta1.13164974.png",
+    "static/media/vegeta2.f9537efd.png": "/memorycardv2/static/media/vegeta2.f9537efd.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e6987c84.js",
+    "static/js/2.186cb068.chunk.js",
+    "static/css/main.c87c87aa.chunk.css",
+    "static/js/main.2f5fb243.chunk.js"
+  ]
+}
